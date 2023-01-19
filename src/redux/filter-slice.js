@@ -1,4 +1,3 @@
-// Відпрацювання та експорт редюсерів на фільтрацію контактів
 import { createSlice } from '@reduxjs/toolkit';
 
 const filterSlice = createSlice({

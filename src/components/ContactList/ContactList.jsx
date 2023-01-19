@@ -4,10 +4,10 @@ import { ContactContainer, ContactEl, ContactBtn } from './ContactList.styled';
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ContactContainer>
-      {contacts.map(({ id, name, number }) => (
+      {contacts.map(({ id, name, phone }) => (
         <ContactEl key={id}>
           <span>{name}: </span>
-          <span>{number}</span>
+          <span>{phone}</span>
           <ContactBtn type="button" onClick={() => onDeleteContact(id)}>
             Delete
           </ContactBtn>

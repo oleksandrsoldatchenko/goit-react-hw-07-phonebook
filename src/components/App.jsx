@@ -1,6 +1,8 @@
-import { Form } from '../ContactForm/ContactForm';
-import { ContactList } from '../ContactList/ContactList';
-import { Filter } from '../Filter/Filter';
+import { Toaster } from 'react-hot-toast';
+
+import { Form } from './Form/Form';
+import { ContactList } from './ContactList/ContactList';
+import { Filter } from './Filter/Filter';
 
 import { useFilter } from 'hooks/useFilter';
 import { useContacts } from 'hooks/useContacts';
@@ -28,6 +30,7 @@ export function App() {
           Phonebook is empty! <br /> Add your contacts.
         </h3>
       )}
+      <Toaster position="top-center" reverseOrder={false} />
     </Container>
   );
 }

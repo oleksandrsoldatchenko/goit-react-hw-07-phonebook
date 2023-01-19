@@ -4,16 +4,16 @@ import {
   ContaierField,
   ContainerForm,
   BtnDisabled,
-} from './ContactForm.styled';
+} from './Form.styled';
 
 export function Form({ onData }) {
   const initialState = {
     name: '',
-    number: '',
+    phone: '',
   };
 
   const [state, setState] = useState({ ...initialState });
-  const { name, number } = state;
+  const { name, phone } = state;
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
@@ -45,11 +45,11 @@ export function Form({ onData }) {
         />
       </ContaierField>
       <ContaierField>
-        Number
+        Phone number
         <FieldItem
           type="tel"
-          name="number"
-          value={number}
+          name="phone"
+          value={phone}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
@@ -57,7 +57,7 @@ export function Form({ onData }) {
           onChange={handleChange}
         />
       </ContaierField>
-      <BtnDisabled type="submit" disabled={!name || !number}>
+      <BtnDisabled type="submit" disabled={!name || !phone}>
         Add contact
       </BtnDisabled>
     </ContainerForm>
